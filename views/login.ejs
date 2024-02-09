@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <form action="/login" method="post">
+    <div class="min-h-screen bg-zinc-800 text-gray-800 antialiased px-4 py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl mx-auto text-center">
+            <span class="text-2xl text-white">Login to your account</span>
+            <div class="relative mt-4 bg-white shadow-md sm:rounded-lg text-left">
+                <div class="h-2 bg-red-600 rounded-t-md"></div>
+                <div class="py-6 px-8">
+                    <label class="block font-semibold">Username or Email<label>
+                    <input type="text" placeholder="Email" class=" border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md">
+                    <label class="block mt-3 font-semibold">Password<label>
+                    <input type="password" placeholder="Password" class=" border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md">
+                    <div class="flex justify-between items-baseline">
+                        <a href="/profile" class="mt-4 bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600">Login</a>
+                        <a href="#" class="text-sm hover:underline">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<a class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full" href="/register">Dont have an account?</a>
+    
+</body>
+</html>

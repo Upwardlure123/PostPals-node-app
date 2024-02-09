@@ -1,0 +1,25 @@
+<% include ./partials/header.ejs %>
+    <div class="w-full min-h-screen bg-zinc-800 px-10 py-8 text-white">
+        <div class="cards flex flex-wrap gap-10">
+            <% user.posts.forEach(function(elem){ %>
+                <div class="card w-32">
+                    <div class="w-full h-40 bg-sky-200 rounded-lg overflow-hidden">
+                        <img src="/images/uploads/<%= elem.image %>" class="w-full h-full object-cover" alt="">
+                    </div>
+                    <h5 class="mt-2 text-sm"><%= elem.title %></h5>
+                    <div class="flex flex-col mt-2"> <!-- Changed flex to flex-col -->
+                        <!-- Form for deleting post -->
+                        <form method="POST" action="/delete/<%= elem._id %>" class="mb-2"> <!-- Added mb-2 for margin-bottom -->
+                            <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded-lg">Delete</button>
+                        </form>
+                        <!-- Form for changing post -->
+                        <form method="POST" action="/change/<%= elem._id %>" enctype="multipart/form-data">
+                            <input type="file" name="image" accept="image/*">
+                            <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded-lg">Change</button>
+                        </form>
+                    </div>
+                </div> 
+            <% }) %> 
+        </div>
+    </div>
+<% include ./partials/footer.ejs %>
